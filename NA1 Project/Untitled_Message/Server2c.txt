@@ -1,0 +1,22 @@
+i
+import socket
+clients = []
+
+host='192.168.5.3'
+port=4610
+s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#s=socket.socket()
+s.bind((host,port))
+s.listen(2)
+c1, addr1 = s.accept()
+c2, addr2 = s.accept()
+#print "Connection from:" + str(addr)
+count = 0
+while True:
+    print str(c1.recv(1024))
+    
+
+    print str(c2.recv(1024))
+            
+
+c.close()

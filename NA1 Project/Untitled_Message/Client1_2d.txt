@@ -1,0 +1,34 @@
+i
+import socket
+host='192.168.5.3'
+port=4101
+s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#s=socket.socket()
+s.connect((host,port))
+#message=raw_input("enter -->")
+while True:    
+    message=raw_input("Client1: ")
+    s.send('Client1:' + message)
+    data = s.recv(1024)
+    print str(data)
+     
+    
+s.close() 
+
+
+i
+import socket
+host='192.168.5.3'
+port=4101
+s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#s=socket.socket()
+s.connect((host,port))
+#message=raw_input("enter -->")
+while True:    
+    message=raw_input("Client2: ")
+    s.send('Client2:' + message)
+    data = s.recv(1024)
+    print str(data)
+     
+    
+s.close() 

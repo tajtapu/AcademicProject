@@ -1,0 +1,14 @@
+i
+import socket
+host='192.168.5.3'
+port=9000
+s=socket.socket()
+s.connect((host,port))
+
+while True:
+    message=raw_input()
+    if message=='quit':
+        break
+    s.send(message)
+     
+s.close() 

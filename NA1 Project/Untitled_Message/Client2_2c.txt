@@ -1,0 +1,15 @@
+i
+import socket
+host='192.168.5.3'
+port=4610
+s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#s=socket.socket()
+s.connect((host,port))
+#message=raw_input("enter -->")
+while True:    
+    message=raw_input()
+    s.send(message)
+
+     
+    
+s.close() 
